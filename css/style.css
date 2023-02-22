@@ -1,0 +1,27 @@
+body {     
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 37%, rgba(205,205,228,1) 82%, rgba(181,183,184,1) 100%); 
+    font-family: 'roboto', serif;   
+}
+
+.brand {
+    text-align: center;
+    margin-top: 0%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    letter-spacing: 5px;
+    font-size:450%;
+    /*border: black solid;
+    /* border-radius: 50px 50px 50px 50px; */
+  }
+
+.footerStyle{
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: lightgrey;
+	
+	border-radius: 6px 6px 0px 0px;
+}
