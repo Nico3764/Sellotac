@@ -2,26 +2,81 @@ body {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 37%, rgba(205,205,228,1) 82%, rgba(181,183,184,1) 100%); 
     font-family: 'roboto', serif;   
+    margin-left: 0%;
 }
 
 .brand {
     text-align: center;
     margin-top: 0%;
-    color: white;
+    margin-bottom: 0%;
+    color: orange;
     text-shadow: 2px 2px 4px #000000;
     letter-spacing: 5px;
     font-size:450%;
     /*border: black solid;
     /* border-radius: 50px 50px 50px 50px; */
   }
+  .brandsub {
+    text-align: center;
+    margin-top: 0%;
+    color: orange;
+    text-shadow: 2px 2px 4px #000000;
+    letter-spacing: 5px;    
+  }
 
 .footerStyle{
 
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background: lightgrey;
-	
-	border-radius: 6px 6px 0px 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: lightgrey;
+    
+    border-radius: 6px 6px 0px 0px;
 }
+.sidebar{
+    height:300px;
+    width:100%;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color:rgba(181,183,184,1) ;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 0%;
+    padding: 0px;
+    opacity: 90%;
+    padding: auto;    
+}
+.sidebar tr:nth-child(even){background-color: #f2f2f2;}
+
+.sidebar tr:hover {background-color: #ddd;}
+a{
+    text-transform: capitalize;
+    text-align: left;  
+    color: white;    
+    text-shadow: 2px 2px 4px #000000;
+    letter-spacing: 5px;        
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #454140;    
+}
+
+a:active {
+    text-decoration: underline;
+    color:  #c1502e;
+}
+.buttonMenu{
+    width: 5%;
+    height: 32px;
+    font-size:22px;
+    padding-left: 1%;
+}
+.animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
