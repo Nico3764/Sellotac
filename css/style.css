@@ -9,19 +9,21 @@ body {
     text-align: center;
     margin-top: 0%;
     margin-bottom: 0%;
-    color: orange;
+    color: white;
     text-shadow: 2px 2px 4px #000000;
     letter-spacing: 5px;
-    font-size:450%;
+    font-size:550%;
+    font-family: "Shantell Sans", serif; 
     /*border: black solid;
     /* border-radius: 50px 50px 50px 50px; */
   }
   .brandsub {
     text-align: center;
     margin-top: 0%;
-    color: orange;
+    color: white;
     text-shadow: 2px 2px 4px #000000;
     letter-spacing: 5px;    
+    font-family: "Shantell Sans", serif;
   }
 
 .footerStyle{
@@ -31,7 +33,7 @@ body {
     bottom: 0;
     width: 100%;
     background: lightgrey;
-    
+    opacity: 80%;
     border-radius: 6px 6px 0px 0px;
 }
 .sidebar{
@@ -79,4 +81,31 @@ a:active {
     font-size:22px;
     padding-left: 1%;
 }
-.animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.animate-zoom {
+    animation:animatezoom 0.6s
+}
+
+@keyframes animatezoom{
+        from{
+            transform:scale(0)
+        } 
+        to{
+            transform:scale(1)
+        }
+}
+
+
+.animate-top{
+    position:relative;
+    animation:animatetop 0.4s
+}
+@keyframes animatetop{
+    from{
+        top:-30px;
+        opacity:0
+    } 
+    to{
+        top:0;
+        opacity:1
+    }
+}
