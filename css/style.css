@@ -12,7 +12,7 @@ body {
     color: white;
     text-shadow: 2px 2px 4px #000000;
     letter-spacing: 5px;
-    font-size:550%;
+    font-size:250%;
     font-family: "Shantell Sans", serif; 
     /*border: black solid;
     /* border-radius: 50px 50px 50px 50px; */
@@ -108,4 +108,25 @@ a:active {
         top:0;
         opacity:1
     }
+}
+.cartShopping{
+    font-size:40%; 
+    z-index: 1; 
+    position: fixed; 
+    top: 10%; 
+    right: 5%; 
+    background: lightgrey; 
+    opacity: 80%; 
+    border-radius: 10px;
+}
+.buy{
+    font-size:110%; 
+    text-align: center;
+    z-index: 1; 
+    position: relative; 
+    bottom: 0px;
+    background: #F1713F; 
+    opacity: 80%; 
+    border-radius: 10px;
+    padding: 10px;
 }

@@ -1,4 +1,5 @@
 localStorage.myInterval=4000; 
+localStorage.cartShopping= [0,0,0,0,0,0];
 let menuView=(event, action) =>
 {
     if(action === 'slide'){
@@ -28,9 +29,11 @@ let menuView=(event, action) =>
             console.log("en este caso dibujaría la section sellos Fechadores");
         break;
         case "sellosRopa":
+            sellosRopaView();
             console.log("en este caso dibujaría la section sellos Ropa");
         break;
         case "sellosMadera":
+            sellosMaderaView();
             console.log("en este caso dibujaría la section sellos Madera");
         break;
         case "sellosProfesionales":
@@ -38,9 +41,19 @@ let menuView=(event, action) =>
             console.log("en este caso dibujaría la section sellos Profesionales");
         break;
         case "sellosEscolares":
-            sellosEscolaresView();
+            sellosEscolaresView();            
             console.log("en este caso dibujaría la section sellos Escolares");
         break;
+        case "buyEscolar":
+            //cartShopping("escolar", 1);
+            localStorage.cartShopping[0]=1;
+            console.log("localStorage.cartShopping: "+localStorage.cartShopping);
+        break;
+        case "buyProfecional":
+            cartShopping("profecional", 1);
+            console.log("en este caso sumaría +1 a los sellos Escolares");
+        break;
+        
     }
 }
 let carrouselInterval=(route,id) =>
@@ -56,7 +69,7 @@ let corrouselActualiceView=(route,id) =>
     //console.log(elementSelect.getAttribute("src"));
     for (let i = 1; i < 10; i++) {
         imgName=route+"Carrousel" + i + ".jpeg";
-        console.log("estoy comparando " + currentImgName + " con "+ imgName)
+        //console.log("estoy comparando " + currentImgName + " con "+ imgName)
         if (currentImgName === imgName){
             imgName=route+"Carrousel" + (i+1) + ".jpeg";
             if(imgName === route+"Carrousel10.jpeg"){
@@ -70,7 +83,21 @@ let corrouselActualiceView=(route,id) =>
     
     elementSelect.setAttribute("src", imgName );
 }
-
+let cartShopping=(product, amount) =>{
+    console.log("producto: "+product+ "cantidad: "+ amount);
+   
+    console.log(localStorage.cartShopping);
+}
+let sellosRopaView=() =>
+{
+    document.getElementById('section').innerHTML= htmlSellosRopa();
+    carrouselInterval("./img/CarrouselRopa/", "imgCarrousel");
+}
+let sellosMaderaView=() =>
+{
+    document.getElementById('section').innerHTML= htmlSellosMadera();
+    carrouselInterval("./img/CarrouselMadera/", "imgCarrousel");
+}
 let sellosProfesionalesView=() =>
 {
     document.getElementById('section').innerHTML= htmlSellosProfesionales();
