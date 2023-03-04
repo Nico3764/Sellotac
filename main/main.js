@@ -1,5 +1,8 @@
+//Vbles Globales en localStorage:
 localStorage.myInterval=4000; 
-localStorage.cartShopping= [0,0,0,0,0,0];
+let cartObject = { 'escolares': 0, 'profesionales': 0, 'madera': 0, 'ropa':0, 'fechadores':0, 'pocket':0 };
+localStorage.setItem('cartObject', JSON.stringify(cartObject));
+
 let menuView=(event, action) =>
 {
     if(action === 'slide'){
@@ -15,7 +18,11 @@ let menuView=(event, action) =>
     
     console.log(event.target.id);
     let eventId= event.target.id;
-    switch (eventId) {
+    switch (eventId) {        
+        case "mainPage":
+            startview();
+            console.log("en este caso dibujaría la section Principal");
+            break;
         case "sellosNovedosos":
             console.log("en este caso dibujaría la section Sellos Novedosos");
             break;
@@ -23,9 +30,11 @@ let menuView=(event, action) =>
             console.log("en este caso dibujaría la section sellos Mas Vendidos");
             break;
         case "sellosPocket":
+            sellosPocketView();
             console.log("en este caso dibujaría la section sellos Pocket");
         break;
         case "sellosFechadores":
+            sellosFechadoresView();
             console.log("en este caso dibujaría la section sellos Fechadores");
         break;
         case "sellosRopa":
@@ -45,13 +54,25 @@ let menuView=(event, action) =>
             console.log("en este caso dibujaría la section sellos Escolares");
         break;
         case "buyEscolar":
-            //cartShopping("escolar", 1);
-            localStorage.cartShopping[0]=1;
-            console.log("localStorage.cartShopping: "+localStorage.cartShopping);
+            cartShopping("escolares", 1);
         break;
         case "buyProfecional":
-            cartShopping("profecional", 1);
-            console.log("en este caso sumaría +1 a los sellos Escolares");
+            cartShopping("profesionales", 1);
+        break;
+        case "buyMadera":
+            cartShopping("madera", 1);
+        break;
+        case "buyRopa":
+            cartShopping("ropa", 1);
+        break;
+        case "buyFechadores":
+            cartShopping("fechadores", 1);
+        break;        
+        case "buyPocket":
+            cartShopping("pocket", 1);
+        break;        
+        case "cartShop":
+            cartShopView();
         break;
         
     }
@@ -83,10 +104,57 @@ let corrouselActualiceView=(route,id) =>
     
     elementSelect.setAttribute("src", imgName );
 }
+
+let cartShopView=() =>{
+    console.log(cartShopping());
+    //Falta agregar el modal que muestre el carrito y permita editarlo.
+}
 let cartShopping=(product, amount) =>{
-    console.log("producto: "+product+ "cantidad: "+ amount);
-   
-    console.log(localStorage.cartShopping);
+    let retrievedObject = localStorage.getItem('cartObject');
+   // console.log("el Object recibido JSON es: "+retrievedObject);
+    //console.log("el Object recibido es: ", JSON.parse(retrievedObject));
+    cartObject=JSON.parse(retrievedObject);
+    console.log("producto: "+product+ "-->cantidad: "+ amount);
+    switch (product) {
+        case "escolares":
+            cartObject[product]+= amount;
+            break;
+        case "profesionales":
+            cartObject[product]+= amount;
+            break;
+        case "madera":
+            cartObject[product]+= amount;     
+            break;
+        case "ropa":
+            cartObject[product]+= amount;
+        break;    
+        case "fechadores":
+            cartObject[product]+= amount;
+        break;
+        case "pocket":
+            cartObject[product]+= amount;
+        break;
+        default:
+            return cartObject;
+    }   
+    console.log("El Object del carrito es: ", cartObject);
+    localStorage.setItem('cartObject', JSON.stringify(cartObject));
+    document.getElementById('cartIcon').innerText= Number(document.getElementById('cartIcon').textContent)+ amount;
+    //console.log(document.getElementById('cartIcon').textContent);
+    let currentCart=encodeURI("Hola, quería consultar pos los sellos que vi en la web: "+localStorage.cartObject);
+    document.getElementById('whatsapp').innerHTML=`<a id="whatsapp" href="https://wa.me/5492234368578?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
+    
+}
+
+let sellosPocketView=() =>
+{
+    document.getElementById('section').innerHTML= htmlSellosPocket();
+    carrouselInterval("./img/CarrouselPocket/", "imgCarrousel");
+}
+let sellosFechadoresView=() =>
+{
+    document.getElementById('section').innerHTML= htmlSellosFechadores();
+    carrouselInterval("./img/CarrouselFechadores/", "imgCarrousel");
 }
 let sellosRopaView=() =>
 {
