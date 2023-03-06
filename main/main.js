@@ -1,9 +1,10 @@
 //Vbles Globales en localStorage:
 localStorage.myInterval=4000; 
 let cartObject = { 'escolares': 0, 'profesionales': 0, 'madera': 0, 'ropa':0, 'fechadores':0, 'pocket':0 };
+//let cartObject = { 'escolares': 1, 'profesionales': 1, 'madera': 1, 'ropa':1, 'fechadores':1, 'pocket':1 };
 localStorage.setItem('cartObject', JSON.stringify(cartObject));
 
-let menuView=(event, action) =>
+let menuView=(event, action) => //
 {
     if(action === 'slide'){
         document.getElementById('actMenu').style.display = "none";
@@ -18,7 +19,49 @@ let menuView=(event, action) =>
     
     console.log(event.target.id);
     let eventId= event.target.id;
+    //EVENTOS DEL CARRITO DE COMPRAS
     switch (eventId) {        
+        case "removefechadores":
+            cartShopping("fechadores", -1);
+            modalShopView("block");
+            console.log("en este caso resto 1 al carrito de fechadores");
+            break;  
+        case "removepocket":
+            cartShopping("pocket", -1);
+            modalShopView("block");
+            console.log("en este caso resto 1 al carrito de pocket");
+            break;  
+        case "removeropa":
+            cartShopping("ropa", -1);
+            modalShopView("block");
+            console.log("en este caso resto 1 al carrito de ropa");
+            break;  
+        case "removemadera":
+            cartShopping("madera", -1);
+            modalShopView("block");
+            console.log("en este caso resto 1 al carrito de madera");
+            break;  
+        case "removeprofesionales":
+            cartShopping("profesionales", -1);
+            modalShopView("block");
+            console.log("en este caso resto 1 al carrito de profesionales");
+            break;  
+        case "removeescolares":
+            cartShopping("escolares", -1);
+            modalShopView("block");
+            console.log("en este caso resto 1 al carrito de escolares");
+            break;        
+        case "closex":
+            modalShopView("none");
+            console.log("en este caso cerraría el carrito de compras");
+            break;
+        case "cartShop":
+            modalShopView("block");
+            console.log("en este caso dibujaría el carrito de compras");
+            break;
+    }
+    //EVENTOS DE LAS SECCIONES
+    switch (eventId) {  
         case "mainPage":
             startview();
             console.log("en este caso dibujaría la section Principal");
@@ -70,11 +113,7 @@ let menuView=(event, action) =>
         break;        
         case "buyPocket":
             cartShopping("pocket", 1);
-        break;        
-        case "cartShop":
-            cartShopView();
-        break;
-        
+        break;                
     }
 }
 let carrouselInterval=(route,id) =>
@@ -105,12 +144,9 @@ let corrouselActualiceView=(route,id) =>
     elementSelect.setAttribute("src", imgName );
 }
 
-let cartShopView=() =>{
-    console.log(cartShopping());
-    //Falta agregar el modal que muestre el carrito y permita editarlo.
-}
 let cartShopping=(product, amount) =>{
     let retrievedObject = localStorage.getItem('cartObject');
+    let txtWapp="Productos: \n";
    // console.log("el Object recibido JSON es: "+retrievedObject);
     //console.log("el Object recibido es: ", JSON.parse(retrievedObject));
     cartObject=JSON.parse(retrievedObject);
@@ -141,9 +177,38 @@ let cartShopping=(product, amount) =>{
     localStorage.setItem('cartObject', JSON.stringify(cartObject));
     document.getElementById('cartIcon').innerText= Number(document.getElementById('cartIcon').textContent)+ amount;
     //console.log(document.getElementById('cartIcon').textContent);
-    let currentCart=encodeURI("Hola, quería consultar pos los sellos que vi en la web: "+localStorage.cartObject);
+    for (let x in cartObject){  //recorre el object cartObject y guarda su contenido en una vble de texto       
+        if(cartObject[x] !== 0){
+            txtWapp+= "Sello: "+x+"   Cantidad: "+cartObject[x]+"\n";//\n es un salto de linea
+        }             
+    }
+    console.log("le estaría enviando por Wapp: \n"+txtWapp); 
+    //Para que lo lea Wapp tiene que estar codificado como url, en js se usa la sig función.
+    let currentCart=encodeURI("Hola, quería consultar pos los sellos que vi en la web: \n"+txtWapp);
     document.getElementById('whatsapp').innerHTML=`<a id="whatsapp" href="https://wa.me/5492234368578?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
+    document.getElementById('whatsappFooter').innerHTML=`<a id="whatsappFooter" href="https://wa.me/5492234368578?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
+
     
+}
+
+let modalShopView=(action) =>
+{
+    let cartShop=cartShopping();
+    let idLine="";
+    let idSello="";
+    
+    for (let x in cartShop){
+        idSello="amount"+x;
+        idLine="line"+x;
+        if (cartShop[x] !== 0){            
+            document.getElementById(idSello).textContent=cartShop[x];
+            document.getElementById(idLine).style.display="block";
+        }else{
+            console.log(idSello+"++++"+cartShop[x]);
+            document.getElementById(idLine).style.display="none";
+        }
+    }    
+    document.getElementById("modalShop").style.display=action;
 }
 
 let sellosPocketView=() =>

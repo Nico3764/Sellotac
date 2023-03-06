@@ -183,14 +183,26 @@ a:active {
     font-size: 28px;
     font-weight: bold;
   }
-  
+   
   .close:hover,
   .close:focus {
     color: #454140;
     text-decoration: none;
     cursor: pointer;
   }
-  
+  .closedark {
+    color: darkred;
+    float: right;
+    padding-left: 12px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .closedark:hover,
+  .closedark:focus {
+    color: #454140;
+    text-decoration: none;
+    cursor: pointer;
+  }
   .modal-header {
     padding: 2px 16px;
     background-color: #F1713F;

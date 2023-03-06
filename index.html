@@ -84,45 +84,51 @@
     </table>
     <div style="padding: 30px; margin: 30px;"></div>
     <!--Modal Carrito de Compras-->
-    <div id="myModal" class="modal">
 
+    <div id="modalShop" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <span class="close">&times;</span>
+            <span id="closex" class="close">&times;</span>
             <h2><i class="fa-solid fa-cart-shopping" style="padding-right: 5px;"></i>Carrito de Compras</h2>
           </div>
           <div class="modal-body">
             <table style="width: 100%;">
-                <tr>
+                <tr id="lineescolares">
                     <td><img id="" src="./img/CarrouselEscolares/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
                     <td>Sellos Escolares</td>  
-                    <td>0</td>  
+                    <td id="amountescolares">0</td>  
+                    <td><span id="removeescolares" class="closedark">&times;</span></td>
                 </tr>
-                <tr>
+                <tr id="lineprofesionales">
                     <td><img id="" src="./img/CarrouselProfesionales/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
                     <td>Sellos Profecionales</td>     
-                    <td>0</td>   
+                    <td id="amountprofesionales" >0</td>   
+                    <td><span id="removeprofesionales" class="closedark">&times;</span></td>
                 </tr>
-                <tr>
+                <tr id="linemadera">
                     <td><img id="" src="./img/CarrouselMadera/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
                     <td>Sellos Madera</td>   
-                    <td>0</td>    
+                    <td id="amountmadera" >0</td>   
+                    <td><span id="removemadera" class="closedark">&times;</span></td>
                 </tr>
-                <tr>
+                <tr id="lineropa">
                     <td><img id="" src="./img/CarrouselRopa/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
                     <td>Sellos Ropa</td>   
-                    <td>0</td>  
+                    <td id="amountropa" >0</td>  
+                    <td><span id="removeropa" class="closedark">&times;</span></td>
                 </tr>
-                <tr>
+                <tr id="linepocket">
                     <td><img id="" src="./img/CarrouselPocket/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
                     <td>Sellos Pocket</td>   
-                    <td>0</td>   
+                    <td id="amountpocket" >0</td>  
+                    <td><span id="removepocket" class="closedark">&times;</span></td> 
                 </tr>
-                <tr>
-                    <td><img id="" src="./img/CarrouselFechadores/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
+                <tr id="linefechadores">
+                    <td><img  src="./img/CarrouselFechadores/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 30px; height: 30px; border-radius: 10%;"></td>
                     <td>Sellos Fechadores</td>   
-                    <td>0</td>  
+                    <td id="amountfechadores" >0</td>  
+                    <td><span id="removefechadores" class="closedark">&times;</span></td>
                 </tr>
               </table>
           </div>
@@ -130,7 +136,7 @@
             <table>
                 <tr>
                     <td>Consulte por su compra con nuestros vendedores:</td>
-                    <td><a id="whatsapp" href="https://wa.me/5492234368578?text=Yo%20interesado%20en%20sellos" target="_blank" style="color: green; margin-left: 30px; font-size: 54px;">
+                    <td id="whatsapp"><a  href="https://wa.me/5492234368578?text=Yo%20interesado%20en%20sellos" target="_blank" style="color: green; margin-left: 30px; font-size: 54px;">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a></td>
                   </tr>
@@ -147,17 +153,17 @@
             <a href="https://www.facebook.com/solamente.nico.5?mibextid=ZbWKwL" target="_blank" style="color: #4267B2;"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://ar.linkedin.com/" target="_blank" style="color:#00a0dc;"><i class="fa-brands fa-linkedin"></i></a>  
             <a href="https://twitter.com/?lang=es" target="_blank" style="color:#00acee;"><i class="fa-brands fa-twitter"></i></a>                      
-            <a id="whatsapp" href="https://wa.me/5492234368578?text=Yo%20interesado%20en%20sellos" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> 
+            <a id="whatsappFooter" href="https://wa.me/5492234368578?text=Yo%20interesado%20en%20sellos" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> 
             <a href="https://www.gmail.com" target="_blank" style="color: black;"><i class="fa-regular fa-envelope"></i></a>
         </div>
-        <div style="position: fixed; text-align: end;bottom: 0px;right: 0px;">
-            <span><small>Creado con:</small></span>
+        <div style="position: fixed; text-align: end;bottom: 0px;right: 5px;">
+            <i class="fa-solid fa-code"style="color: red;"></i>
+            <span><small>---->Creado por: ISIsoft</small></span>              
+            <span><small>Utilizando:</small></span>
             <span class="">
               <i class="fa-brands fa-html5"></i>
               <i class="fa-brands fa-js"></i>
-              <i class="fa-brands fa-css3-alt"></i>
-              <span><small>---->Por: ISIsoft</small></span>
-              <i class="fa-solid fa-code"style="color: red;"></i>
+              <i class="fa-brands fa-css3-alt"></i>              
             </span>
         </div>
     </footer>
