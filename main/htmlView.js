@@ -1,3 +1,26 @@
+let htmlFooter=()=>
+{
+    let footerContacts=`
+        <span class="" ><small>Contactos</small></span>
+        <a href="https://instagram.com/nicoo_1987?igshid=ZDdkNTZiNTM=" target="_blank" style="color: maroon;"><i class="fa-brands fa-instagram"></i></a>                      
+        <a href="https://www.facebook.com/solamente.nico.5?mibextid=ZbWKwL" target="_blank" style="color: #4267B2;"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://ar.linkedin.com/" target="_blank" style="color:#00a0dc;"><i class="fa-brands fa-linkedin"></i></a>  
+        <a href="https://twitter.com/?lang=es" target="_blank" style="color:#00acee;"><i class="fa-brands fa-twitter"></i></a>                      
+        <a id="whatsappFooter" href="https://wa.me/5492234368578?text=Yo%20interesado%20en%20sellos" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> 
+        <a href="https://www.gmail.com" target="_blank" style="color: black;"><i class="fa-regular fa-envelope"></i></a>`
+    let footerDeveloper=`
+         <i class="fa-solid fa-code"style="color: red;"></i>
+         <span><small>---->Creado por: ISIsoft</small></span>  
+         <span><small>Utilizando:</small></span>
+         <span class="">
+             <i class="fa-brands fa-html5"></i>
+             <i class="fa-brands fa-js"></i>
+             <i class="fa-brands fa-css3-alt"></i>              
+         </span>`
+
+    return drawViewSize(footerContacts,footerDeveloper,"");
+}
+
 let htmlPresentation=()=>{
 
     let presentationDescription=`

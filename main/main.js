@@ -245,6 +245,7 @@ let sellosEscolaresView=() =>
 let presentationView=() =>
 {    
     document.getElementById('section').innerHTML= htmlPresentation();
+    document.getElementById("footerMain").innerHTML= htmlFooter();
     clearInterval(localStorage.myInterval);
     localStorage.myInterval = setInterval(()=>{corrouselActualiceView("./img/CarrouselPortada/", "imgCarrousel")}, 4000);
 }
