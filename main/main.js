@@ -293,7 +293,7 @@ let resizeView=()=>
 }
 let startview=() =>
 {
-    document.getElementById('actMenu').addEventListener('mouseover', (event)=>{menuView(event)});
+    //document.getElementById('actMenu').addEventListener('mouseover', (event)=>{menuView(event)});
     document.getElementById('actMenu').addEventListener('click', (event)=>{menuView(event)});
     document.getElementById('body').addEventListener('click', (event)=>{menuView(event)});
     presentationView();
