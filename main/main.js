@@ -4,21 +4,22 @@ let cartObject = { 'escolares': 0, 'profesionales': 0, 'madera': 0, 'ropa':0, 'f
 //let cartObject = { 'escolares': 1, 'profesionales': 1, 'madera': 1, 'ropa':1, 'fechadores':1, 'pocket':1 };
 localStorage.setItem('cartObject', JSON.stringify(cartObject));
 
-let menuView=(event, action) => //
+let menuView=(event) => //
 {
-    if(action === 'slide'){
+    let eventId= event.target.id;
+    if(eventId === 'actMenu'){
         document.getElementById('actMenu').style.display = "none";
         document.getElementById('dropdownMenu').style.display = "block";    
     };
     myTimeout = setTimeout(()=>{
-        if (action === 'hidden'){
+        if (eventId !== 'actMenu'){
             document.getElementById('actMenu').style.display = "block";
             document.getElementById('dropdownMenu').style.display = "none";   
         };
     }, 100);
     
     console.log(event.target.id);
-    let eventId= event.target.id;
+    
     //EVENTOS DEL CARRITO DE COMPRAS
     switch (eventId) {        
         case "removefechadores":
@@ -193,6 +194,7 @@ let cartShopping=(product, amount) =>{
 
 let modalShopView=(action) =>
 {
+    localStorage.setItem('lastView', "shop");
     let cartShop=cartShopping();
     let idLine="";
     let idSello="";
@@ -213,52 +215,92 @@ let modalShopView=(action) =>
 
 let sellosPocketView=() =>
 {
+    localStorage.setItem('lastView', "pocket");
     document.getElementById('section').innerHTML= htmlSellosPocket();
     carrouselInterval("./img/CarrouselPocket/", "imgCarrousel");
 }
 let sellosFechadoresView=() =>
 {
+    localStorage.setItem('lastView', "fechadores");
     document.getElementById('section').innerHTML= htmlSellosFechadores();
     carrouselInterval("./img/CarrouselFechadores/", "imgCarrousel");
 }
 let sellosRopaView=() =>
 {
+    localStorage.setItem('lastView', "ropa");
     document.getElementById('section').innerHTML= htmlSellosRopa();
     carrouselInterval("./img/CarrouselRopa/", "imgCarrousel");
 }
 let sellosMaderaView=() =>
 {
+    localStorage.setItem('lastView', "madera");
     document.getElementById('section').innerHTML= htmlSellosMadera();
     carrouselInterval("./img/CarrouselMadera/", "imgCarrousel");
 }
 let sellosProfesionalesView=() =>
 {
+    localStorage.setItem('lastView', "profesionales");
     document.getElementById('section').innerHTML= htmlSellosProfesionales();
     carrouselInterval("./img/CarrouselProfesionales/", "imgCarrousel");
 }
 let sellosEscolaresView=() =>
 {
+    localStorage.setItem('lastView', "escolares");
     document.getElementById('section').innerHTML= htmlSellosEscolares();
     carrouselInterval("./img/CarrouselEscolares/", "imgCarrousel");
 }
 
 let presentationView=() =>
 {    
+    localStorage.setItem('lastView', "portada");
     document.getElementById('section').innerHTML= htmlPresentation();
     document.getElementById("footerMain").innerHTML= htmlFooter();
     clearInterval(localStorage.myInterval);
     localStorage.myInterval = setInterval(()=>{corrouselActualiceView("./img/CarrouselPortada/", "imgCarrousel")}, 4000);
 }
 
+
+let resizeView=()=>
+{
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+    actualView= localStorage.lastView;
+    switch (actualView) {
+        case "escolares":
+            sellosEscolaresView();
+            break;
+        case "profesionales":
+            sellosProfesionalesView();
+            break;
+        case "madera":
+            sellosMaderaView();     
+            break;
+        case "ropa":
+            sellosRopaView();
+        break;    
+        case "fechadores":
+            sellosFechadoresView();
+        break;
+        case "pocket":
+            sellosPocketView();
+        break;
+        case "shop":
+            modalShopView();
+        break;        
+        default:
+            presentationView();
+    }   
+    
+}
 let startview=() =>
 {
-    document.getElementById('actMenu').addEventListener('mouseover', (event)=>{menuView(event,'slide')});
-    document.getElementById('body').addEventListener('click', (event)=>{menuView(event,'hidden')});
+    document.getElementById('actMenu').addEventListener('mouseover', (event)=>{menuView(event)});
+    document.getElementById('actMenu').addEventListener('click', (event)=>{menuView(event)});
+    document.getElementById('body').addEventListener('click', (event)=>{menuView(event)});
     presentationView();
 }
-
 let start =() =>
 {
 	startview();
+    window.addEventListener("resize", resizeView )
 }
 window.addEventListener('DOMContentLoaded', start );
