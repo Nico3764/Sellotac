@@ -185,9 +185,9 @@ let cartShopping=(product, amount) =>{
     }
     console.log("le estaría enviando por Wapp: \n"+txtWapp); 
     //Para que lo lea Wapp tiene que estar codificado como url, en js se usa la sig función.
-    let currentCart=encodeURI("Hola, quería consultar pos los sellos que vi en la web: \n"+txtWapp);
-    document.getElementById('whatsapp').innerHTML=`<a id="whatsapp" href="https://wa.me/5492234368578?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
-    document.getElementById('whatsappFooter').innerHTML=`<a id="whatsappFooter" href="https://wa.me/5492234368578?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
+    let currentCart=encodeURI("Hola, quería consultar por los sellos que vi en la web: \n"+txtWapp);
+    document.getElementById('whatsapp').innerHTML=`<a id="whatsapp" href="https://wa.me/5492236946602?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
+    document.getElementById('whatsappFooter').innerHTML=`<a id="whatsappFooter" href="https://wa.me/5492236946602?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
 
     
 }
@@ -267,27 +267,35 @@ let resizeView=()=>
     switch (actualView) {
         case "escolares":
             sellosEscolaresView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
             break;
         case "profesionales":
             sellosProfesionalesView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
             break;
         case "madera":
             sellosMaderaView();     
+            document.getElementById("footerMain").innerHTML= htmlFooter();
             break;
         case "ropa":
             sellosRopaView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
         break;    
         case "fechadores":
             sellosFechadoresView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
         break;
         case "pocket":
             sellosPocketView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
         break;
         case "shop":
             modalShopView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
         break;        
         default:
             presentationView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
     }   
     
 }
@@ -301,6 +309,6 @@ let startview=() =>
 let start =() =>
 {
 	startview();
-    window.addEventListener("resize", resizeView )
+    window.addEventListener("resize", resizeView );
 }
 window.addEventListener('DOMContentLoaded', start );

@@ -28,15 +28,14 @@ body {
   }
 
 .footerStyle{
-
-    position: fixed;
+    position:relative; 
     left: 0;
     bottom: 0;
     width: 100%;
     background: lightgrey;
     opacity: 80%;
-    border-radius: 6px 6px 0px 0px;
-    text-align: center;
+    border-radius: 10px;
+    font-family: "Shantell Sans", serif;     
 }
 .sidebar{
     height:300px;
@@ -96,7 +95,6 @@ a:active {
         }
 }
 
-
 .animate-top{
     position:relative;
     animation:animatetop 0.4s
@@ -111,6 +109,13 @@ a:active {
         opacity:1
     }
 }
+ .imgCarrousel{
+    width: 30px; 
+    height: 30px; 
+    border-radius: 10%;
+ }
+
+
 .cartShopping{
     font-size:2vw; 
     z-index: 1; 
@@ -120,6 +125,11 @@ a:active {
     background: lightgrey; 
     opacity: 80%; 
     border-radius: 10px;    
+}
+@media only screen and (max-width: 780px) {
+  .cartShopping {
+    font-size:3vw;
+  }
 }
 .buy{
     font-size:110%; 
@@ -196,8 +206,13 @@ a:active {
     color: darkred;
     float: right;
     padding-left: 12px;
-    font-size: 28px;
+    font-size: 2.5vw;
     font-weight: bold;
+  }
+  @media only screen and (max-width: 780px) {
+    .closedark{
+      font-size:3.5vw;
+    }
   }
   .closedark:hover,
   .closedark:focus {
@@ -212,18 +227,44 @@ a:active {
     border-radius: 10px 10px 0 0;
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
+    font-size:2vw;
   }
-  
-  .modal-body {
+  @media only screen and (max-width: 780px) {
+    .modal-header{
+      font-size:3.5vw;
+    }
+  }
+
+.modal-body {
     padding: 2px 16px;
     width:80%; 
-    font-size: 20px;
+    font-size: 2vw;
 }
-
+@media only screen and (max-width: 780px) {
+  .modal-body { 
+    font-size:3vw;
+  } 
+}
   
-  .modal-footer {
+.modal-footer {
     padding: 2px 16px;
     background-color: #F1713F;
     color: white;
     border-radius: 0 0 10px 10px;
-  }
+    font-size:2vw;
+}
+@media only screen and (max-width: 780px) {
+    .modal-footer{
+      font-size:3vw;
+    }    
+}
+#whatsapp{
+  color: green; 
+  margin-left: 30px; 
+  font-size: 4vw;
+}
+@media only screen and (max-width: 780px) {
+  #whatsapp{
+    font-size:6vw;
+  }    
+}

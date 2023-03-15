@@ -1,7 +1,7 @@
 let htmlFooter=()=>
 {
     let footerContacts=`
-        <span class="" ><small>Contactos</small></span>
+        <span class="" style="text-align: center;" ><small>Contactos</small></span>
         <a href="https://instagram.com/nicoo_1987?igshid=ZDdkNTZiNTM=" target="_blank" style="color: maroon;"><i class="fa-brands fa-instagram"></i></a>                      
         <a href="https://www.facebook.com/solamente.nico.5?mibextid=ZbWKwL" target="_blank" style="color: #4267B2;"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://ar.linkedin.com/" target="_blank" style="color:#00a0dc;"><i class="fa-brands fa-linkedin"></i></a>  
@@ -18,7 +18,7 @@ let htmlFooter=()=>
              <i class="fa-brands fa-css3-alt"></i>              
          </span>`
 
-    return drawViewSize(footerContacts,footerDeveloper,"");
+    return drawViewSize(footerContacts,footerDeveloper,"footer");
 }
 
 let htmlPresentation=()=>{
@@ -28,7 +28,10 @@ let htmlPresentation=()=>{
     <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
         al carrito y consultá con nuestros vendedores por tu diseño.</p>
     <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-        Animate.!! estas a tiempo.</p>`;
+        Animate.!! estas a tiempo.</p>
+    <p>Trabajamos con seña del 50 % y el 50 % restante cuando se entrega  . Podes abonar en efectivo ,tranferencia bancaria y cuenta DNI.</p>
+    <p>Formas de pago:</p> 
+    <p>Efectivo/ transferencia bancaria/ cuenta DNI</p>`;
 
     let presentationCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPortada/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
     
@@ -39,16 +42,13 @@ let htmlPresentation=()=>{
 
 let htmlSellosEscolares=() =>{
 
-    let escolaresDescription=`<p>ESCOLARES, sit amet consectetur adipisicing elit. Dolor at laboriosam
-    tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-    sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-    tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-    sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
-    <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-        al carrito y consultá con nuestros vendedores por tu diseño.</p>
-    <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-        Animate.!! estas a tiempo.</p>`;
+    let escolaresDescription=`<p>Sellos Escolares ideal para rotular los margenes de las 
+        hojas de los chicos para el cole.</p>
+        <p>También hacemos sellos Profesionales, para Docentes, Personales..!</p>
+        <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
+            al carrito y consultá con nuestros vendedores por tu diseño.</p>
+        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
+            Animate.!! estas a tiempo.</p>`;
 
     let escolaresCarrousel=`<img id="imgCarrousel"src="./img/CarrouselEscolares/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
     let escolaresBuyButton=`<a href="#" id="buyEscolar" class="buy">Agregar al carrito
@@ -85,12 +85,12 @@ let htmlSellosProfesionales=() =>{
 
 let htmlSellosMadera=() =>{
     
-    let maderaDescription=`<p>MADERA, sit amet consectetur adipisicing elit. Dolor at laboriosam
-    tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-    sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-    tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-    sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
+    let maderaDescription=`<p>Tradicional, sellos de madera.</p> 
+    <p>Con base en madera  y perilla plástica.</p>
+    
+    <p>Vienen en varias medidas y sirven para sellar documentos</p>
+    
+    <p>El precio no incluye almohadilla ni tinta.</p>
     <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
         al carrito y consultá con nuestros vendedores por tu diseño.</p>
     <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
@@ -171,6 +171,18 @@ let drawViewSize =(sectionText,carrouselImg,buyButton)=>
 {
     //console.log ("entra y muestra" +sectionText+carrouselImg+buyButton)
     let size= windowsSize();
+    if ((buyButton === "footer") && (size === "sm") ||(buyButton === "footer") && (size === "m"))
+    {
+        return `
+        <div style="font-size: 5vw;">`+sectionText+`</div>
+        <div style="margin: 10px"></div>
+        <div style="font-size: 2vw; text-align: right;padding-right: 2vw;">`+carrouselImg+`</div>`;
+    } else {
+        if ((buyButton === "footer") && (size === "l") ||(buyButton === "footer") && (size === "lg"))
+        return `
+        <span style="font-size: 4vw;">`+sectionText+`</span>
+        <span style="font-size: 1.5vw; text-align: right;padding-left: 16vw;">`+carrouselImg+`</span>`;
+    };
     switch (size) {
         case "sm":
             return `
