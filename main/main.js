@@ -1,7 +1,6 @@
 //Vbles Globales en localStorage:
 localStorage.myInterval=4000; 
 let cartObject = { 'escolares': 0, 'profesionales': 0, 'madera': 0, 'ropa':0, 'fechadores':0, 'pocket':0 };
-//let cartObject = { 'escolares': 1, 'profesionales': 1, 'madera': 1, 'ropa':1, 'fechadores':1, 'pocket':1 };
 localStorage.setItem('cartObject', JSON.stringify(cartObject));
 
 let menuView=(event) => //
@@ -19,6 +18,7 @@ let menuView=(event) => //
     }, 100);
     
     console.log(event.target.id);
+    console.log("el evento que llega al analizador es: ", event);
     
     //EVENTOS DEL CARRITO DE COMPRAS
     switch (eventId) {        
@@ -259,7 +259,6 @@ let presentationView=() =>
     localStorage.myInterval = setInterval(()=>{corrouselActualiceView("./img/CarrouselPortada/", "imgCarrousel")}, 4000);
 }
 
-
 let resizeView=()=>
 {
     console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
@@ -300,11 +299,9 @@ let resizeView=()=>
             presentationView();
             document.getElementById("footerMain").innerHTML= htmlFooter();
         break;
-    }   
-    document.getElementById('body').addEventListener('click', (event)=>{timeoutForMenuView(event)});
-     
-      
+    }        
 }
+
  let timeoutForMenuView =(event) =>
 {
    let myTimeout = setTimeout(()=>{menuView(event)}, 100);
@@ -315,5 +312,6 @@ let start =() =>
     localStorage.lastView="presentation";
 	resizeView();
     window.addEventListener("resize", resizeView );
+    document.getElementById('body').addEventListener('click', (event)=>{timeoutForMenuView(event)});
 }
 window.addEventListener('DOMContentLoaded', start );
