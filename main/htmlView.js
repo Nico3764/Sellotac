@@ -2,11 +2,9 @@ let htmlFooter=()=>
 {
     let footerContacts=`
         <span class="" style="text-align: center;" ><small>Contactos</small></span>
-        <a href="https://instagram.com/nicoo_1987?igshid=ZDdkNTZiNTM=" target="_blank" style="color: maroon;"><i class="fa-brands fa-instagram"></i></a>                      
-        <a href="https://www.facebook.com/solamente.nico.5?mibextid=ZbWKwL" target="_blank" style="color: #4267B2;"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://ar.linkedin.com/" target="_blank" style="color:#00a0dc;"><i class="fa-brands fa-linkedin"></i></a>  
-        <a href="https://twitter.com/?lang=es" target="_blank" style="color:#00acee;"><i class="fa-brands fa-twitter"></i></a>                      
-        <a id="whatsappFooter" href="https://wa.me/5492234368578?text=Yo%20interesado%20en%20sellos" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> 
+        <a href="https://instagram.com/innovet2022?igshid=ZDdkNTZiNTM=" target="_blank" style="color: maroon;"><i class="fa-brands fa-instagram"></i></a>                      
+        <a href="https://www.facebook.com/gabiyeuge.manzzeti?mibextid=ZbWKwL" target="_blank" style="color: #4267B2;"><i class="fa-brands fa-facebook"></i></a>
+        <a id="whatsappFooter" href="https://wa.me/5492236946602?text=Hola,%20quería%20consultar%20por%20los%20sellos:" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> 
         <a href="https://www.gmail.com" target="_blank" style="color: black;"><i class="fa-regular fa-envelope"></i></a>`
     let footerDeveloper=`
          <i class="fa-solid fa-code"style="color: red;"></i>
@@ -24,14 +22,47 @@ let htmlFooter=()=>
 let htmlPresentation=()=>{
 
     let presentationDescription=`
-    <p>Si tenes una idea, nosotros lo plasmamos en un sello.</p>
-    <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-        al carrito y consultá con nuestros vendedores por tu diseño.</p>
-    <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-        Animate.!! estas a tiempo.</p>
-    <p>Trabajamos con seña del 50 % y el 50 % restante cuando se entrega  . Podes abonar en efectivo ,tranferencia bancaria y cuenta DNI.</p>
-    <p>Formas de pago:</p> 
-    <p>Efectivo/ transferencia bancaria/ cuenta DNI</p>`;
+    <table style="width:100%">
+        <tr>
+          <td>
+            <img class="ico" src="./img/Ico/ico1.jpeg" alt="Imagen de persona con una idea">
+          </td>
+          <td>
+            Si tenes una idea,  nosotros lo plasmamos en un sello.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="ico" src="./img/Ico/ico2.png" alt="Imagen de un carrito de compras">
+          </td>
+          <td>
+            Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
+            al carrito y consultá con nuestros vendedores por tu diseño.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="ico" src="./img/Ico/ico3.png" alt="Imagen de persona festejando">
+          </td>
+          <td>
+            Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
+            Animate.!! estas a tiempo.
+          </td>
+        </tr>        
+        <tr>
+          <td>
+            <img class="ico" src="./img/Ico/ico4.jpeg" alt="Imagen de tarjeta de credito">
+          </td>
+          <td>
+            Formas de pago: Podes abonar en efectivo ,tranferencia bancaria o cuenta DNI.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Trabajamos con seña del 50 % y el 50 % restante cuando se entrega.
+          </td>         
+        </tr>        
+    </table>`;
 
     let presentationCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPortada/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
     

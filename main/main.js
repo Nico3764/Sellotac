@@ -64,7 +64,7 @@ let menuView=(event) => //
     //EVENTOS DE LAS SECCIONES
     switch (eventId) {  
         case "mainPage":
-            startview();
+            presentationView();
             console.log("en este caso dibujaría la section Principal");
             break;
         case "sellosNovedosos":
@@ -252,7 +252,7 @@ let sellosEscolaresView=() =>
 
 let presentationView=() =>
 {    
-    localStorage.setItem('lastView', "portada");
+    localStorage.setItem('lastView', "presentation");
     document.getElementById('section').innerHTML= htmlPresentation();
     document.getElementById("footerMain").innerHTML= htmlFooter();
     clearInterval(localStorage.myInterval);
@@ -263,7 +263,10 @@ let presentationView=() =>
 let resizeView=()=>
 {
     console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+    document.getElementById('body').removeEventListener('click', (event)=>{menuView(event)});   
+    document.getElementById('body').removeEventListener('click', (event)=>{menuView(event)}, true); 
     actualView= localStorage.lastView;
+    console.log("vista principal");
     switch (actualView) {
         case "escolares":
             sellosEscolaresView();
@@ -293,22 +296,24 @@ let resizeView=()=>
             modalShopView();
             document.getElementById("footerMain").innerHTML= htmlFooter();
         break;        
-        default:
+        case "presentation":            
             presentationView();
             document.getElementById("footerMain").innerHTML= htmlFooter();
+        break;
     }   
-    
+    document.getElementById('body').addEventListener('click', (event)=>{timeoutForMenuView(event)});
+     
+      
 }
-let startview=() =>
+ let timeoutForMenuView =(event) =>
 {
-    //document.getElementById('actMenu').addEventListener('mouseover', (event)=>{menuView(event)});
-    document.getElementById('actMenu').addEventListener('click', (event)=>{menuView(event)});
-    document.getElementById('body').addEventListener('click', (event)=>{menuView(event)});
-    presentationView();
+   let myTimeout = setTimeout(()=>{menuView(event)}, 100);
 }
+
 let start =() =>
 {
-	startview();
+    localStorage.lastView="presentation";
+	resizeView();
     window.addEventListener("resize", resizeView );
 }
 window.addEventListener('DOMContentLoaded', start );
