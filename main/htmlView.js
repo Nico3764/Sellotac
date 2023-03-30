@@ -197,6 +197,31 @@ let htmlSellosPocket=() =>{
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton); 
 }
+let htmlPuntosDeEntrega=()=>
+{
+    let puntosDeEntregaDescription=`<p>La entrega es gratis en los siguientes puntos de entrega:</p>
+                                    <p><b style="font-size:20px">--></b> Independencia y Castelli.</p>
+                                    <p><b style="font-size:20px">--></b> Independencia y Gascon.</p>
+                                    <p><b style="font-size:20px">--></b> Independencia y Avellaneda.</p>
+                                    <p><b style="font-size:20px">--></b> Constitución y Carballo.</p>
+                                    <p><b style="font-size:20px">--></b> Constitución y la costa-->Shell.</p>
+                                    <p><b style="font-size:20px">--></b> Constitución y Ruta 2-->Carrefour.</p>
+                                    <p><b style="font-size:20px">--></b> Independencia y Juan B. Justo.</p>
+                                    <p><b style="font-size:20px">--></b> Juan B. Justo y Buenos Aires.</p>
+                                    <p><b style="font-size:20px">--></b> Alem y Quintana.</p>
+                                    <p>Consulte con nuestros vendedores disponibilidad y costos por entregas en otros puntos.</p>                         
+                                    `;
+
+
+    let puntosDeEntregaCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPuntos/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 400px; height: 350px; border-radius: 10%;">`;
+    let puntosDeEntregaBuyButton=` `;
+                         
+    //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
+    return drawViewSize(puntosDeEntregaDescription,puntosDeEntregaCarrousel,puntosDeEntregaBuyButton);
+
+
+
+}
 
 let drawViewSize =(sectionText,carrouselImg,buyButton)=>
 {

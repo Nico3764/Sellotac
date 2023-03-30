@@ -8,11 +8,11 @@ body {
 .brand {    
     margin-top: 0px;
     margin-bottom: 0%;   
-    font-size:8vw;     
+    font-size:9vw;     
    
 }
 .brandsub {    
-    font-size:2vw;
+    font-size:3vw;
     margin-top: 0px;
 }
 
@@ -31,7 +31,7 @@ body {
     width:100%;
     z-index: 1;
     overflow-x: hidden;
-    background-color:rgba(181,183,184,1) ;
+    background-color:#3EB489 ;
     border-radius: 0px 10px 10px 0px;
     margin-left: 0%;
     padding: 0px;
@@ -110,14 +110,14 @@ a:active {
     z-index: 1; 
     position: absolute; 
     
-    right: 5%; 
-    background: lightgrey; 
+    right: 3%; 
+    background: #F1713F; 
     opacity: 80%; 
     border-radius: 10px;    
 }
 @media only screen and (max-width: 780px) {
   .cartShopping {
-    font-size:3vw;
+    font-size:3.5vw;
   }
 }
 .buy{
@@ -146,7 +146,7 @@ a:active {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */    
-    opacity: 80%;    
+    opacity: 90%;    
   }
   
   /* Modal Content */
@@ -260,7 +260,7 @@ a:active {
 .initLogoSm{
   
   border-radius: 50%; 
-  opacity: 60%; 
+  opacity: 90%; 
   text-align: center; 
   margin-top: 1px;
   margin-left: auto; 

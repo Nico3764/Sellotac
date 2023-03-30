@@ -70,8 +70,9 @@ let menuView=(event) => //
         case "sellosNovedosos":
             console.log("en este caso dibujaría la section Sellos Novedosos");
             break;
-        case "sellosMasVendidos":
-            console.log("en este caso dibujaría la section sellos Mas Vendidos");
+        case "puntosDeEntrega":
+            console.log("en este caso dibujaría la section Puntos de entrega");
+            puntosDeEntregaView();
             break;
         case "sellosPocket":
             sellosPocketView();
@@ -212,7 +213,11 @@ let modalShopView=(action) =>
     }    
     document.getElementById("modalShop").style.display=action;
 }
-
+let puntosDeEntregaView=()=>{
+    localStorage.setItem('lastView', "puntos");
+    document.getElementById('section').innerHTML= htmlPuntosDeEntrega();
+    carrouselInterval("./img/CarrouselPuntos/", "imgCarrousel");
+}
 let sellosPocketView=() =>
 {
     localStorage.setItem('lastView', "pocket");
@@ -299,12 +304,16 @@ let resizeView=()=>
             presentationView();
             document.getElementById("footerMain").innerHTML= htmlFooter();
         break;
+        case "puntos":
+            puntosDeEntregaView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
+            break;
     }        
 }
 
  let timeoutForMenuView =(event) =>
 {
-   let myTimeout = setTimeout(()=>{menuView(event)}, 100);
+   let myTimeout = setTimeout(()=>{menuView(event)}, 200);
 }
 
 let start =() =>
