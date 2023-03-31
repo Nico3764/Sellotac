@@ -2,7 +2,7 @@ body {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 37%, rgba(205,205,228,1) 82%, rgba(181,183,184,1) 100%); 
     font-family: 'roboto', serif;   
-    margin-left: 0%;
+    margin: 1%;
 }
 
 .brand {    
@@ -309,5 +309,31 @@ a:active {
 @media only screen and (max-width: 780px) {
   #section{
     font-size: 3vw;    
+  }    
+}
+#modalImgCarrousel{
+  position: fixed; 
+  z-index: 2; 
+  top: 10%; 
+  right: 25%; 
+  width: 500px; 
+  height: 500px; 
+  text-align: center; 
+  font-size: 18px; 
+  display: none; 
+  overflow: scroll;
+}
+@media only screen and (max-width: 780px) {
+  #modalImgCarrousel{
+    position: fixed; 
+    z-index: 2; 
+    top: 10%; 
+    right: 1%; 
+    width: 360px; 
+    height: 360px; 
+    text-align: center; 
+    font-size: 18px; 
+    display: none; 
+    overflow: scroll;
   }    
 }

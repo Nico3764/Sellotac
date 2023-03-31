@@ -199,7 +199,7 @@ let htmlSellosPocket=() =>{
 }
 let htmlPuntosDeEntrega=()=>
 {
-    let puntosDeEntregaDescription=`<p>La entrega es gratis en los siguientes puntos de entrega:</p>
+    let puntosDeEntregaDescription=`<p>La entrega se realiza sin costo en zona centro/macrocentro o en los siguientes puntos de entrega:</p>
                                     <p><b style="font-size:20px">--></b> Independencia y Castelli.</p>
                                     <p><b style="font-size:20px">--></b> Independencia y Gascon.</p>
                                     <p><b style="font-size:20px">--></b> Independencia y Avellaneda.</p>
@@ -216,13 +216,52 @@ let htmlPuntosDeEntrega=()=>
     let puntosDeEntregaCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPuntos/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 400px; height: 350px; border-radius: 10%;">`;
     let puntosDeEntregaBuyButton=` `;
                          
-    //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(puntosDeEntregaDescription,puntosDeEntregaCarrousel,puntosDeEntregaBuyButton);
-
-
 
 }
 
+let htmlPreguntasFrecuentes=()=>
+{
+    let preguntasFrecuentesDescription=`<p><b>¿Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, 
+                                            cupiditate reiciendis velit ab ipsam soluta aspernatur sapiente sit?</b>
+                                        </p>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, cupiditate reiciendis 
+                                            velit ab ipsam soluta aspernatur sapiente sit.
+                                        </p>
+                                        <p><b>¿Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, 
+                                            cupiditate reiciendis velit ab ipsam soluta aspernatur sapiente sit?</b>
+                                        </p>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, cupiditate reiciendis 
+                                            velit ab ipsam soluta aspernatur sapiente sit.
+                                        </p>
+                                        <p><b>¿Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, 
+                                            cupiditate reiciendis velit ab ipsam soluta aspernatur sapiente sit?</b>
+                                        </p>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, cupiditate reiciendis 
+                                            velit ab ipsam soluta aspernatur sapiente sit.
+                                        </p>
+                                        <p><b>¿Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, 
+                                            cupiditate reiciendis velit ab ipsam soluta aspernatur sapiente sit?</b>
+                                        </p>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+                                            quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, cupiditate reiciendis 
+                                            velit ab ipsam soluta aspernatur sapiente sit.
+                                        </p>`;
+
+
+    let preguntasFrecuentesCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPreguntas/Carrousel1.jpeg" alt="Imagen de pregunta" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let preguntasFrecuentesBuyButton=` `;
+                         
+    return drawViewSize(preguntasFrecuentesDescription,preguntasFrecuentesCarrousel,preguntasFrecuentesBuyButton);
+
+}
 let drawViewSize =(sectionText,carrouselImg,buyButton)=>
 {
     //console.log ("entra y muestra" +sectionText+carrouselImg+buyButton)

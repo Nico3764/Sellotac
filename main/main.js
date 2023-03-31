@@ -62,18 +62,26 @@ let menuView=(event) => //
             break;
     }
     //EVENTOS DE LAS SECCIONES
-    switch (eventId) {  
+    switch (eventId) {          
+        case "modalImgCarrousel":
+            modalImgCarrouselView(event,"close");
+            console.log("en este caso cerraría el modal de img actual de carrousel");
+        case "imgCarrousel":          
+                modalImgCarrouselView(event,"open");
+                console.log("en este caso mostraria el modal de img actual de carrousel");                       
+        break;
         case "mainPage":
             presentationView();
             console.log("en este caso dibujaría la section Principal");
-            break;
-        case "sellosNovedosos":
-            console.log("en este caso dibujaría la section Sellos Novedosos");
-            break;
+        break;
+        case "preguntasFrecuentes":
+            console.log("en este caso dibujaría la section Preguntas Frecuentes");
+            preguntasFrecuentesView();
+        break;
         case "puntosDeEntrega":
             console.log("en este caso dibujaría la section Puntos de entrega");
             puntosDeEntregaView();
-            break;
+        break;
         case "sellosPocket":
             sellosPocketView();
             console.log("en este caso dibujaría la section sellos Pocket");
@@ -193,6 +201,18 @@ let cartShopping=(product, amount) =>{
     
 }
 
+let modalImgCarrouselView =(event,action)=>
+{
+    let elementModalCarrousel=document.getElementById("modalImgCarrousel");    
+    if ((event.target.id === "imgCarrousel") && (action === "open")){
+        let srcNew=event.target.currentSrc;
+        elementModalCarrousel.src=srcNew;
+        elementModalCarrousel.style.display="block";
+    };
+    if (action === "close"){
+        elementModalCarrousel.style.display="none";
+    }
+}
 let modalShopView=(action) =>
 {
     localStorage.setItem('lastView', "shop");
@@ -212,6 +232,11 @@ let modalShopView=(action) =>
         }
     }    
     document.getElementById("modalShop").style.display=action;
+}
+let preguntasFrecuentesView=()=>{
+    localStorage.setItem('lastView', "preguntas");
+    document.getElementById('section').innerHTML= htmlPreguntasFrecuentes();
+    carrouselInterval("./img/CarrouselPreguntas/", "imgCarrousel");
 }
 let puntosDeEntregaView=()=>{
     localStorage.setItem('lastView', "puntos");
@@ -307,7 +332,11 @@ let resizeView=()=>
         case "puntos":
             puntosDeEntregaView();
             document.getElementById("footerMain").innerHTML= htmlFooter();
-            break;
+        break;
+        case "preguntas":
+            preguntasFrecuentesView();
+            document.getElementById("footerMain").innerHTML= htmlFooter();
+        break;
     }        
 }
 
