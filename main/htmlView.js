@@ -64,8 +64,12 @@ let htmlPresentation=()=>{
         </tr>        
     </table>`;
 
-    let presentationCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPortada/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
-    
+    let presentationCarrousel=`
+        <div class="container">
+            <img id="imgCarrousel"src="./img/CarrouselPortada/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+            <a id="next" href="#imgCarrousel">></a>
+            <a id="prev" href="#imgCarrousel"><</a>
+        </div>`;
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(presentationDescription,presentationCarrousel,""); 
     
@@ -81,7 +85,12 @@ let htmlSellosEscolares=() =>{
         <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
             Animate.!! estas a tiempo.</p>`;
 
-    let escolaresCarrousel=`<img id="imgCarrousel"src="./img/CarrouselEscolares/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let escolaresCarrousel=`
+        <div class="container">
+            <img id="imgCarrousel"src="./img/CarrouselEscolares/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+            <a id="next" href="#imgCarrousel">></a>
+            <a id="prev" href="#imgCarrousel"><</a>
+        </div>`;
     let escolaresBuyButton=`<a href="#" id="buyEscolar" class="buy">Agregar al carrito
     <i class="fa-solid fa-cart-shopping" style=""></i>
     </a> `;
@@ -105,7 +114,12 @@ let htmlSellosProfesionales=() =>{
     <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
         Animate.!! estas a tiempo.</p>`;
 
-    let profesionalesCarrousel=`<img id="imgCarrousel"src="./img/CarrouselProfesionales/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let profesionalesCarrousel=`
+        <div class="container">
+            <img id="imgCarrousel"src="./img/CarrouselProfesionales/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+            <a id="next" href="#imgCarrousel">></a>
+            <a id="prev" href="#imgCarrousel"><</a>
+        </div>`;
     let profesionalesBuyButton=`<a href="#" id="buyProfecional" class="buy">Agregar al carrito
     <i class="fa-solid fa-cart-shopping" style=""></i>
     </a> `;
@@ -127,7 +141,12 @@ let htmlSellosMadera=() =>{
     <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
         Animate.!! estas a tiempo.</p>`;
 
-    let maderaCarrousel=`<img id="imgCarrousel"src="./img/CarrouselMadera/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let maderaCarrousel=`
+            <div class="container">
+                <img id="imgCarrousel"src="./img/CarrouselMadera/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+                <a id="next" href="#imgCarrousel">></a>
+                <a id="prev" href="#imgCarrousel"><</a>
+            </div>`;
     let maderaBuyButton=`<a href="#" id="buyMadera" class="buy">Agregar al carrito
     <i class="fa-solid fa-cart-shopping" style=""></i>
     </a> `;
@@ -148,7 +167,12 @@ let htmlSellosRopa=() =>{
                             <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
                                 Animate.!! estas a tiempo.</p>`;
 
-    let ropaCarrousel=`<img id="imgCarrousel"src="./img/CarrouselRopa/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let ropaCarrousel=`
+            <div class="container">
+                <img id="imgCarrousel"src="./img/CarrouselRopa/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+                <a id="next" href="#imgCarrousel">></a>
+                <a id="prev" href="#imgCarrousel"><</a>
+            </div>`;
     let ropaBuyButton=`<a href="#" id="buyRopa" class="buy">Agregar al carrito
                             <i class="fa-solid fa-cart-shopping" style=""></i>
                          </a> `;
@@ -169,7 +193,12 @@ let htmlSellosFechadores=() =>{
                             <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
                                 Animate.!! estas a tiempo.</p>`;
 
-    let fechadoresCarrousel=`<img id="imgCarrousel"src="./img/CarrouselFechadores/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let fechadoresCarrousel=`
+            <div class="container">
+                <img id="imgCarrousel"src="./img/CarrouselFechadores/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+                <a id="next" href="#imgCarrousel">></a>
+                <a id="prev" href="#imgCarrousel"><</a>
+            </div>`;
     let fechadoresBuyButton=`<a href="#" id="buyFechadores" class="buy">Agregar al carrito
                             <i class="fa-solid fa-cart-shopping" style=""></i>
                          </a> `;
@@ -189,7 +218,12 @@ let htmlSellosPocket=() =>{
                             <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
                                 Animate.!! estas a tiempo.</p>`;
 
-    let pocketCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPocket/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let pocketCarrousel=`
+            <div class="container">
+                <img id="imgCarrousel"src="./img/CarrouselPocket/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+                <a id="next" href="#imgCarrousel">></a>
+                <a id="prev" href="#imgCarrousel"><</a>
+            </div>`;
     let pocketBuyButton=`<a href="#" id="buyPocket" class="buy">Agregar al carrito
                             <i class="fa-solid fa-cart-shopping" style=""></i>
                          </a> `;
@@ -213,7 +247,12 @@ let htmlPuntosDeEntrega=()=>
                                     `;
 
 
-    let puntosDeEntregaCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPuntos/Carrousel1.jpeg" alt="Imagen de sello Trodat" style="width: 400px; height: 350px; border-radius: 10%;">`;
+    let puntosDeEntregaCarrousel=`
+            <div class="container">
+                <img id="imgCarrousel"src="./img/CarrouselPuntos/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+                <a id="next" href="#imgCarrousel">></a>
+                <a id="prev" href="#imgCarrousel"><</a>
+            </div>`;
     let puntosDeEntregaBuyButton=` `;
                          
     return drawViewSize(puntosDeEntregaDescription,puntosDeEntregaCarrousel,puntosDeEntregaBuyButton);
@@ -256,7 +295,12 @@ let htmlPreguntasFrecuentes=()=>
                                         </p>`;
 
 
-    let preguntasFrecuentesCarrousel=`<img id="imgCarrousel"src="./img/CarrouselPreguntas/Carrousel1.jpeg" alt="Imagen de pregunta" style="width: 300px; height: 300px; border-radius: 10%;">`;
+    let preguntasFrecuentesCarrousel=`
+            <div class="container">
+                <img id="imgCarrousel"src="./img/CarrouselPreguntas/Carrousel1.jpeg" alt="Imagen de sello Trodat">
+                <a id="next" href="#imgCarrousel">></a>
+                <a id="prev" href="#imgCarrousel"><</a>
+            </div>`;
     let preguntasFrecuentesBuyButton=` `;
                          
     return drawViewSize(preguntasFrecuentesDescription,preguntasFrecuentesCarrousel,preguntasFrecuentesBuyButton);

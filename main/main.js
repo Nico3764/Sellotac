@@ -63,9 +63,18 @@ let menuView=(event) => //
     }
     //EVENTOS DE LAS SECCIONES
     switch (eventId) {          
+        case "next":
+            nextPrevImg("next");
+            console.log("en este caso avanzaría la de img actual de carrousel a la prox");
+        break;
+        case "prev":
+            nextPrevImg("prev");
+            console.log("en este caso volvería la de img actual de carrousel a la ant");
+        break;
         case "modalImgCarrousel":
             modalImgCarrouselView(event,"close");
             console.log("en este caso cerraría el modal de img actual de carrousel");
+        break;
         case "imgCarrousel":          
                 modalImgCarrouselView(event,"open");
                 console.log("en este caso mostraria el modal de img actual de carrousel");                       
@@ -199,6 +208,46 @@ let cartShopping=(product, amount) =>{
     document.getElementById('whatsappFooter').innerHTML=`<a id="whatsappFooter" href="https://wa.me/5492236946602?text=`+currentCart+`" target="_blank" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> `
 
     
+}
+
+let nextPrevImg=(action)=>
+{
+    let source= document.getElementById("imgCarrousel").attributes[1].textContent;
+    let nextsource=source;
+    let i=0;
+    if (action === "next"){
+            while((source === nextsource) && i<10)
+            {
+                console.log(i.toString(),(i+1).toString());
+                nextsource=source.replace(i.toString(),(i+1).toString());
+                console.log (source,nextsource);
+                if(i === 9){
+                    nextsource=source.replace("9","1");
+                }
+                if (i > 100){
+                    break;
+                }
+                i++;
+            }
+    }
+    if (action === "prev"){
+        i=9;
+        while((source === nextsource) && i>0)
+        {
+                console.log(i.toString(),(i-1).toString());
+                nextsource=source.replace(i.toString(),(i-1).toString());
+                console.log (source,nextsource);
+                if(i === 1){
+                    nextsource=source.replace("1","9");
+                }
+                if (i > 100){
+                    break;
+                }
+                i--;
+        }
+    }
+    document.getElementById("imgCarrousel").src=nextsource;   
+
 }
 
 let modalImgCarrouselView =(event,action)=>
