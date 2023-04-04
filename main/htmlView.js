@@ -22,47 +22,48 @@ let htmlFooter=()=>
 let htmlPresentation=()=>{
 
     let presentationDescription=`
-    <table style="width:100%">
-        <tr>
-          <td>
-            <img class="ico" src="./img/Ico/ico1.jpeg" alt="Imagen de persona con una idea">
-          </td>
-          <td>
-            Si tenes una idea,  nosotros lo plasmamos en un sello.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img class="ico" src="./img/Ico/ico2.png" alt="Imagen de un carrito de compras">
-          </td>
-          <td>
-            Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-            al carrito y consultá con nuestros vendedores por tu diseño.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img class="ico" src="./img/Ico/ico3.png" alt="Imagen de persona festejando">
-          </td>
-          <td>
-            Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-            Animate.!! estas a tiempo.
-          </td>
-        </tr>        
-        <tr>
-          <td>
-            <img class="ico" src="./img/Ico/ico4.jpeg" alt="Imagen de tarjeta de credito">
-          </td>
-          <td>
-            Formas de pago: Podes abonar en efectivo ,tranferencia bancaria o cuenta DNI.
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            Trabajamos con seña del 50 % y el 50 % restante cuando se entrega.
-          </td>         
-        </tr>        
-    </table>`;
+        <h2 style="font-family: Shantell Sans, serif;">Nuestra Propuesta en Sellos:</h2>
+        <table style="width:100%">
+            <tr>
+              <td>
+                <img class="ico" src="./img/Ico/ico1.jpeg" alt="Imagen de persona con una idea">
+              </td>
+              <td>
+                Si tenes una idea,  nosotros lo plasmamos en un sello.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="ico" src="./img/Ico/ico2.png" alt="Imagen de un carrito de compras">
+              </td>
+              <td>
+                Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
+                al carrito y consultá con nuestros vendedores por tu diseño.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="ico" src="./img/Ico/ico3.png" alt="Imagen de persona festejando">
+              </td>
+              <td>
+                Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
+                Animate.!! estas a tiempo.
+              </td>
+            </tr>        
+            <tr>
+              <td>
+                <img class="ico" src="./img/Ico/ico4.jpeg" alt="Imagen de tarjeta de credito">
+              </td>
+              <td>
+                Formas de pago: Podes abonar en efectivo ,tranferencia bancaria o cuenta DNI.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="padding-top: 20px;">
+                Trabajamos con seña del 50 % y el 50 % restante cuando se entrega.
+              </td>         
+            </tr>        
+        </table>`;
 
     let presentationCarrousel=`
         <div class="container">
@@ -74,10 +75,11 @@ let htmlPresentation=()=>{
     return drawViewSize(presentationDescription,presentationCarrousel,""); 
     
 }
-
 let htmlSellosEscolares=() =>{
 
-    let escolaresDescription=`<p>Sellos Escolares ideal para rotular los margenes de las 
+    let escolaresDescription=`
+        <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos ESCOLARES:</h2>
+        <p>Sellos Escolares ideal para rotular los margenes de las 
         hojas de los chicos para el cole.</p>
         <p>También hacemos sellos Profesionales, para Docentes, Personales..!</p>
         <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
@@ -91,28 +93,29 @@ let htmlSellosEscolares=() =>{
             <a id="next" href="#imgCarrousel">></a>
             <a id="prev" href="#imgCarrousel"><</a>
         </div>`;
-    let escolaresBuyButton=`<a href="#" id="buyEscolar" class="buy">Agregar al carrito
-    <i class="fa-solid fa-cart-shopping" style=""></i>
-    </a> `;
+    let escolaresBuyButton=`
+        <a href="#" id="buyEscolar" class="buy">Agregar al carrito
+            <i class="fa-solid fa-cart-shopping" style=""></i>
+        </a> `;
  
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(escolaresDescription,escolaresCarrousel,escolaresBuyButton); 
 
 }
-
-
 let htmlSellosProfesionales=() =>{
 
-    let profesionalesDescription=`<p>PROFESIONALES, sit amet consectetur adipisicing elit. Dolor at laboriosam
-    tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-    sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-    tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-    sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
-    <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-        al carrito y consultá con nuestros vendedores por tu diseño.</p>
-    <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-        Animate.!! estas a tiempo.</p>`;
+    let profesionalesDescription=`
+        <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos PROFESIONALES:</h2>
+        <p>PROFESIONALES, sit amet consectetur adipisicing elit. Dolor at laboriosam
+        tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
+        sequi voluptas nihil ad reprehenderit inventore, nam expedita!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
+        tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
+        sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
+        <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
+            al carrito y consultá con nuestros vendedores por tu diseño.</p>
+        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
+            Animate.!! estas a tiempo.</p>`;
 
     let profesionalesCarrousel=`
         <div class="container">
@@ -120,26 +123,28 @@ let htmlSellosProfesionales=() =>{
             <a id="next" href="#imgCarrousel">></a>
             <a id="prev" href="#imgCarrousel"><</a>
         </div>`;
-    let profesionalesBuyButton=`<a href="#" id="buyProfecional" class="buy">Agregar al carrito
-    <i class="fa-solid fa-cart-shopping" style=""></i>
-    </a> `;
+    let profesionalesBuyButton=`
+        <a href="#" id="buyProfecional" class="buy">Agregar al carrito
+            <i class="fa-solid fa-cart-shopping" style=""></i>
+        </a> `;
  
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(profesionalesDescription,profesionalesCarrousel,profesionalesBuyButton); 
 }
-
 let htmlSellosMadera=() =>{
     
-    let maderaDescription=`<p>Tradicional, sellos de madera.</p> 
-    <p>Con base en madera  y perilla plástica.</p>
-    
-    <p>Vienen en varias medidas y sirven para sellar documentos</p>
-    
-    <p>El precio no incluye almohadilla ni tinta.</p>
-    <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-        al carrito y consultá con nuestros vendedores por tu diseño.</p>
-    <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-        Animate.!! estas a tiempo.</p>`;
+    let maderaDescription=`
+        <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos de MADERA:</h2>
+        <p>Tradicional, sellos de madera.</p> 
+        <p>Con base en madera  y perilla plástica.</p>
+
+        <p>Vienen en varias medidas y sirven para sellar documentos</p>
+
+        <p>El precio no incluye almohadilla ni tinta.</p>
+        <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
+            al carrito y consultá con nuestros vendedores por tu diseño.</p>
+        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
+            Animate.!! estas a tiempo.</p>`;
 
     let maderaCarrousel=`
             <div class="container">
@@ -147,25 +152,29 @@ let htmlSellosMadera=() =>{
                 <a id="next" href="#imgCarrousel">></a>
                 <a id="prev" href="#imgCarrousel"><</a>
             </div>`;
-    let maderaBuyButton=`<a href="#" id="buyMadera" class="buy">Agregar al carrito
-    <i class="fa-solid fa-cart-shopping" style=""></i>
-    </a> `;
+    let maderaBuyButton=`
+        <a href="#" id="buyMadera" class="buy">Agregar al carrito
+            <i class="fa-solid fa-cart-shopping" style=""></i>
+        </a> `;
  
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(maderaDescription,maderaCarrousel,maderaBuyButton); 
 }
 let htmlSellosRopa=() =>{
 
-    let ropaDescription=`<p>Ropa, sit amet consectetur adipisicing elit. Dolor at laboriosam
-                            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-                            sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-                            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-                            sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
-                            <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-                                al carrito y consultá con nuestros vendedores por tu diseño.</p>
-                            <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-                                Animate.!! estas a tiempo.</p>`;
+    let ropaDescription=`
+        <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos para ROPA:</h2>
+        <p>Ropa, sit amet consectetur adipisicing elit. Dolor at laboriosam
+            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
+            sequi voluptas nihil ad reprehenderit inventore, nam expedita!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
+            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
+            sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
+            <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
+                al carrito y consultá con nuestros vendedores por tu diseño.</p>
+            <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
+                Animate.!! estas a tiempo.
+        </p>`;
 
     let ropaCarrousel=`
             <div class="container">
@@ -173,16 +182,19 @@ let htmlSellosRopa=() =>{
                 <a id="next" href="#imgCarrousel">></a>
                 <a id="prev" href="#imgCarrousel"><</a>
             </div>`;
-    let ropaBuyButton=`<a href="#" id="buyRopa" class="buy">Agregar al carrito
-                            <i class="fa-solid fa-cart-shopping" style=""></i>
-                         </a> `;
+    let ropaBuyButton=`
+        <a href="#" id="buyRopa" class="buy">Agregar al carrito
+            <i class="fa-solid fa-cart-shopping" style=""></i>
+        </a> `;
                          
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(ropaDescription,ropaCarrousel,ropaBuyButton); 
 }
 let htmlSellosFechadores=() =>{
     
-    let fechadoresDescription=`<p>FECHADORES, sit amet consectetur adipisicing elit. Dolor at laboriosam
+    let fechadoresDescription=`
+        <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos FECHADORES:</h2>
+        <p>FECHADORES, sit amet consectetur adipisicing elit. Dolor at laboriosam
                             tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
                             sequi voluptas nihil ad reprehenderit inventore, nam expedita!
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
@@ -199,15 +211,18 @@ let htmlSellosFechadores=() =>{
                 <a id="next" href="#imgCarrousel">></a>
                 <a id="prev" href="#imgCarrousel"><</a>
             </div>`;
-    let fechadoresBuyButton=`<a href="#" id="buyFechadores" class="buy">Agregar al carrito
-                            <i class="fa-solid fa-cart-shopping" style=""></i>
-                         </a> `;
+    let fechadoresBuyButton=`
+        <a href="#" id="buyFechadores" class="buy">Agregar al carrito
+            <i class="fa-solid fa-cart-shopping" style=""></i>
+        </a> `;
                          
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(fechadoresDescription,fechadoresCarrousel,fechadoresBuyButton); 
 }
 let htmlSellosPocket=() =>{
-    let pocketDescription=`<p>POCKET, sit amet consectetur adipisicing elit. Dolor at laboriosam
+    let pocketDescription=`
+        <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos POCKET:</h2>
+        <p>POCKET, sit amet consectetur adipisicing elit. Dolor at laboriosam
                             tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
                             sequi voluptas nihil ad reprehenderit inventore, nam expedita!
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
@@ -224,16 +239,19 @@ let htmlSellosPocket=() =>{
                 <a id="next" href="#imgCarrousel">></a>
                 <a id="prev" href="#imgCarrousel"><</a>
             </div>`;
-    let pocketBuyButton=`<a href="#" id="buyPocket" class="buy">Agregar al carrito
-                            <i class="fa-solid fa-cart-shopping" style=""></i>
-                         </a> `;
+    let pocketBuyButton=`
+        <a href="#" id="buyPocket" class="buy">Agregar al carrito
+            <i class="fa-solid fa-cart-shopping" style=""></i>
+        </a> `;
                          
     //console.log(drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton));
     return drawViewSize(pocketDescription,pocketCarrousel,pocketBuyButton); 
 }
 let htmlPuntosDeEntrega=()=>
 {
-    let puntosDeEntregaDescription=`<p>La entrega se realiza sin costo en zona centro/macrocentro o en los siguientes puntos de entrega:</p>
+    let puntosDeEntregaDescription=`
+                                    <h2 style="font-family: Shantell Sans, serif;">Nuestros PUNTOS DE ENTREGA:</h2>
+                                    <p>La entrega se realiza sin costo en zona centro/macrocentro o en los siguientes puntos de entrega:</p>
                                     <p><b style="font-size:20px">--></b> Independencia y Castelli.</p>
                                     <p><b style="font-size:20px">--></b> Independencia y Gascon.</p>
                                     <p><b style="font-size:20px">--></b> Independencia y Avellaneda.</p>
@@ -258,10 +276,11 @@ let htmlPuntosDeEntrega=()=>
     return drawViewSize(puntosDeEntregaDescription,puntosDeEntregaCarrousel,puntosDeEntregaBuyButton);
 
 }
-
 let htmlPreguntasFrecuentes=()=>
 {
-    let preguntasFrecuentesDescription=`<p><b>¿Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
+    let preguntasFrecuentesDescription=`
+                                        <h2 style="font-family: Shantell Sans, serif;">Preguntas Frescuentes:</h2>
+                                        <p><b>¿Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus labore eligendi 
                                             quaerat sed perspiciatis ut commodi porro blanditiis officiis explicabo, 
                                             cupiditate reiciendis velit ab ipsam soluta aspernatur sapiente sit?</b>
                                         </p>
@@ -384,7 +403,6 @@ let drawViewSize =(sectionText,carrouselImg,buyButton)=>
     }   
 
 }
-
 let windowsSize=()=>
 {
     if (window.matchMedia("(max-width: 420px)").matches){
@@ -400,4 +418,3 @@ let windowsSize=()=>
         return "lg";
     }
 }
-    

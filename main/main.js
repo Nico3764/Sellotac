@@ -5,6 +5,7 @@ localStorage.setItem('cartObject', JSON.stringify(cartObject));
 
 let menuView=(event) => //
 {
+    event.preventDefault();//detiene la propagación del evento por defecto, es útil para que los <a> no desplacen la pantalla.
     let eventId= event.target.id;
     if(eventId === 'actMenu'){
         document.getElementById('actMenu').style.display = "none";
@@ -264,7 +265,7 @@ let modalImgCarrouselView =(event,action)=>
 }
 let modalShopView=(action) =>
 {
-    localStorage.setItem('lastView', "shop");
+    //localStorage.setItem('lastView', "shop");
     let cartShop=cartShopping();
     let idLine="";
     let idSello="";
@@ -282,6 +283,7 @@ let modalShopView=(action) =>
     }    
     document.getElementById("modalShop").style.display=action;
 }
+
 let preguntasFrecuentesView=()=>{
     localStorage.setItem('lastView', "preguntas");
     document.getElementById('section').innerHTML= htmlPreguntasFrecuentes();
@@ -328,7 +330,6 @@ let sellosEscolaresView=() =>
     document.getElementById('section').innerHTML= htmlSellosEscolares();
     carrouselInterval("./img/CarrouselEscolares/", "imgCarrousel");
 }
-
 let presentationView=() =>
 {    
     localStorage.setItem('lastView', "presentation");
@@ -341,8 +342,6 @@ let presentationView=() =>
 let resizeView=()=>
 {
     console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
-    document.getElementById('body').removeEventListener('click', (event)=>{menuView(event)});   
-    document.getElementById('body').removeEventListener('click', (event)=>{menuView(event)}, true); 
     actualView= localStorage.lastView;
     console.log("vista principal");
     switch (actualView) {
@@ -371,7 +370,7 @@ let resizeView=()=>
             document.getElementById("footerMain").innerHTML= htmlFooter();
         break;
         case "shop":
-            modalShopView();
+            modalShopView("block");
             document.getElementById("footerMain").innerHTML= htmlFooter();
         break;        
         case "presentation":            
@@ -388,17 +387,17 @@ let resizeView=()=>
         break;
     }        
 }
-
+/* 
  let timeoutForMenuView =(event) =>
 {
    let myTimeout = setTimeout(()=>{menuView(event)}, 200);
-}
+} */
 
 let start =() =>
 {
     localStorage.lastView="presentation";
 	resizeView();
     window.addEventListener("resize", resizeView );
-    document.getElementById('body').addEventListener('click', (event)=>{timeoutForMenuView(event)});
+    document.getElementById('body').addEventListener('click', (event)=>{menuView(event)});
 }
 window.addEventListener('DOMContentLoaded', start );
