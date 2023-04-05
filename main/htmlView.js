@@ -29,7 +29,7 @@ let htmlPresentation=()=>{
                 <img class="ico" src="./img/Ico/ico1.jpeg" alt="Imagen de persona con una idea">
               </td>
               <td>
-                Si tenes una idea,  nosotros lo plasmamos en un sello.
+                Si tenés una idea,  nosotros lo plasmamos en un sello.
               </td>
             </tr>
             <tr>
@@ -48,15 +48,15 @@ let htmlPresentation=()=>{
               </td>
               <td>
                 Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-                Animate.!! estas a tiempo.
+               ¡Animate! Estás a tiempo.
               </td>
             </tr>        
             <tr>
               <td>
-                <img class="ico" src="./img/Ico/ico4.jpeg" alt="Imagen de tarjeta de credito">
+                <img class="ico" src="./img/Ico/ico4.jpeg" alt="Imagen de tarjeta de crédito">
               </td>
               <td>
-                Formas de pago: Podes abonar en efectivo ,transferencia bancaria o cuenta DNI.
+                Formas de pago: Podés abonar en efectivo ,transferencia bancaria o cuenta DNI.
               </td>
             </tr>
             <tr>
@@ -80,29 +80,29 @@ let htmlSellosEscolares=() =>{
 
     let escolaresDescription=`
         <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos ESCOLARES:</h2>
-        <p>Sellos Escolares ideal para rotular los margenes de las 
+        <p>Sellos Escolares ideal para rotular los márgenes de las 
         hojas de los chicos para el cole.</p>
         <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3911 (38x14mm)</b>:<br>
             Sello personalizado automático, armado en forma horizontal o vertical, 
             ideal para usarlo en el margen de las hojas de carpeta Nº3.<br>
             El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
-            Aproximádamente 4 líneas a elección.
+            Aproximadamente 4 líneas a elección.
         </p>
         <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3912 (47x18mm)</b>:<br>
             Sello personalizado automático, armado en forma horizontal o vertical.<br>
             El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
-            Aproximádamente 5 líneas a elección.
+            Aproximadamente 5 líneas a elección.
         </p>
         <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3913 (58x22mm)</b>:<br>
             Sello personalizado automático, armado en forma horizontal o vertical.<br>
             El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
-            Aproximádamente 6 líneas a elección.
+            Aproximadamente 6 líneas a elección.
         </p>
         <p>¡También hacemos sellos Profesionales, para Docentes, Personales..!</p>
         <p>Hace click en agregr al carrito y consultá con nuestros vendedores por tu diseño.</p>
         <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible 
             para utilizarla cuando quieras.
-            <b>Animate.!! estas a tiempo.</b>     
+            <b>Animate.!! estás a tiempo.</b>     
             
         </p>`;
 
@@ -125,28 +125,28 @@ let htmlSellosProfesionales=() =>{
 
     let profesionalesDescription=`
         <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos PROFESIONALES:</h2>
-        <p>Sellos Profesionales: médicos, escribanos, arquitectos, etc. Si sos profesional y estas buscando
+        <p>Sellos Profesionales: médicos, escribanos, arquitectos, etc. Si sos profesional y estás buscando
             tu sello, nosotros lo hacemos con tus datos.</p>
         <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3911 (38x14mm)</b>:<br>
             Sello personalizado automático, armado en forma horizontal o vertical, 
             ideal para usarlo en el margen de las hojas de carpeta Nº3.<br>
             El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
-            Aproximádamente 4 líneas a elección.
+            Aproximadamente 4 líneas a elección.
         </p>
         <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3912 (47x18mm)</b>:<br>
             Sello personalizado automático, armado en forma horizontal o vertical.<br>
             El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
-            Aproximádamente 5 líneas a elección.
+            Aproximadamente 5 líneas a elección.
         </p>
         <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3913 (58x22mm)</b>:<br>
             Sello personalizado automático, armado en forma horizontal o vertical.<br>
             El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
-            Aproximádamente 6 líneas a elección.
+            Aproximadamente 6 líneas a elección.
         </p>
         <p>Hace click en agregr al carrito y consultá con nuestros vendedores por tu diseño.</p>
         <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible 
             para utilizarla cuando quieras.
-            <b>Animate.!! estas a tiempo.</b>           
+            <b>Animate.!! estás a tiempo.</b>           
         </p>`;
 
     let profesionalesCarrousel=`
@@ -176,7 +176,7 @@ let htmlSellosMadera=() =>{
         <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
             al carrito y consultá con nuestros vendedores por tu diseño.</p>
         <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-            Animate.!! estas a tiempo.</p>`;
+           ¡Animate! estás a tiempo.</p>`;
 
     let maderaCarrousel=`
             <div class="container">
@@ -204,7 +204,7 @@ let htmlSellosRopa=() =>{
             <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
                 al carrito y consultá con nuestros vendedores por tu diseño.</p>
             <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-                Animate.!! estas a tiempo.
+               ¡Animate! estás a tiempo.
         </p>`;
 
     let ropaCarrousel=`
@@ -234,7 +234,7 @@ let htmlSellosFechadores=() =>{
                             <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
                                 al carrito y consultá con nuestros vendedores por tu diseño.</p>
                             <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-                                Animate.!! estas a tiempo.</p>`;
+                               ¡Animate! estás a tiempo.</p>`;
 
     let fechadoresCarrousel=`
             <div class="container">
@@ -273,7 +273,7 @@ let htmlSellosPocket=() =>{
         <p>Hace click en agregr al carrito y consultá con nuestros vendedores por tu diseño.</p>
         <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible 
             para utilizarla cuando quieras.
-            <b>Animate.!! estas a tiempo.</b>
+            <b>Animate.!! estás a tiempo.</b>
         </p>`;
 
     let pocketCarrousel=`
