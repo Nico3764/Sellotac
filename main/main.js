@@ -5,8 +5,11 @@ localStorage.setItem('cartObject', JSON.stringify(cartObject));
 
 let menuView=(event) => //
 {
-    event.preventDefault();//detiene la propagación del evento por defecto, es útil para que los <a> no desplacen la pantalla.
     let eventId= event.target.id;
+    let elementOrigin= event.originalTarget.tagName;
+    if(elementOrigin !== "I"){
+        event.preventDefault();//detiene la propagación del evento por defecto, es útil para que los <a> no desplacen la pantalla.
+    }    
     if(eventId === 'actMenu'){
         document.getElementById('actMenu').style.display = "none";
         document.getElementById('dropdownMenu').style.display = "block";    
@@ -18,8 +21,9 @@ let menuView=(event) => //
         };
     }, 100);
     
-    console.log(event.target.id);
     console.log("el evento que llega al analizador es: ", event);
+    console.log("el id del elemento que generó el evento es: ",event.target.id);
+    console.log("el elemento que generó el evento es: "+elementOrigin);
     
     //EVENTOS DEL CARRITO DE COMPRAS
     switch (eventId) {        

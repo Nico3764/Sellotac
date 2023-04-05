@@ -38,7 +38,8 @@ let htmlPresentation=()=>{
               </td>
               <td>
                 Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-                al carrito y consultá con nuestros vendedores por tu diseño.
+                al carrito y consultá con nuestros vendedores por tu diseño. Somos fabricantes, podés comprar con 
+                toda confianza.
               </td>
             </tr>
             <tr>
@@ -55,7 +56,7 @@ let htmlPresentation=()=>{
                 <img class="ico" src="./img/Ico/ico4.jpeg" alt="Imagen de tarjeta de credito">
               </td>
               <td>
-                Formas de pago: Podes abonar en efectivo ,tranferencia bancaria o cuenta DNI.
+                Formas de pago: Podes abonar en efectivo ,transferencia bancaria o cuenta DNI.
               </td>
             </tr>
             <tr>
@@ -81,11 +82,29 @@ let htmlSellosEscolares=() =>{
         <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos ESCOLARES:</h2>
         <p>Sellos Escolares ideal para rotular los margenes de las 
         hojas de los chicos para el cole.</p>
-        <p>También hacemos sellos Profesionales, para Docentes, Personales..!</p>
-        <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-            al carrito y consultá con nuestros vendedores por tu diseño.</p>
-        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-            Animate.!! estas a tiempo.</p>`;
+        <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3911 (38x14mm)</b>:<br>
+            Sello personalizado automático, armado en forma horizontal o vertical, 
+            ideal para usarlo en el margen de las hojas de carpeta Nº3.<br>
+            El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
+            Aproximádamente 4 líneas a elección.
+        </p>
+        <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3912 (47x18mm)</b>:<br>
+            Sello personalizado automático, armado en forma horizontal o vertical.<br>
+            El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
+            Aproximádamente 5 líneas a elección.
+        </p>
+        <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3913 (58x22mm)</b>:<br>
+            Sello personalizado automático, armado en forma horizontal o vertical.<br>
+            El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
+            Aproximádamente 6 líneas a elección.
+        </p>
+        <p>¡También hacemos sellos Profesionales, para Docentes, Personales..!</p>
+        <p>Hace click en agregr al carrito y consultá con nuestros vendedores por tu diseño.</p>
+        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible 
+            para utilizarla cuando quieras.
+            <b>Animate.!! estas a tiempo.</b>     
+            
+        </p>`;
 
     let escolaresCarrousel=`
         <div class="container">
@@ -106,16 +125,29 @@ let htmlSellosProfesionales=() =>{
 
     let profesionalesDescription=`
         <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos PROFESIONALES:</h2>
-        <p>PROFESIONALES, sit amet consectetur adipisicing elit. Dolor at laboriosam
-        tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-        sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-        tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-        sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
-        <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-            al carrito y consultá con nuestros vendedores por tu diseño.</p>
-        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-            Animate.!! estas a tiempo.</p>`;
+        <p>Sellos Profesionales: médicos, escribanos, arquitectos, etc. Si sos profesional y estas buscando
+            tu sello, nosotros lo hacemos con tus datos.</p>
+        <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3911 (38x14mm)</b>:<br>
+            Sello personalizado automático, armado en forma horizontal o vertical, 
+            ideal para usarlo en el margen de las hojas de carpeta Nº3.<br>
+            El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
+            Aproximádamente 4 líneas a elección.
+        </p>
+        <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3912 (47x18mm)</b>:<br>
+            Sello personalizado automático, armado en forma horizontal o vertical.<br>
+            El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
+            Aproximádamente 5 líneas a elección.
+        </p>
+        <p><i class="fa-sharp fa-solid fa-stamp"></i><b>Trodat 3913 (58x22mm)</b>:<br>
+            Sello personalizado automático, armado en forma horizontal o vertical.<br>
+            El precio incluye 1 dibujo, 1 nombre, 1 apellido, hoja Nº y Materia (o área, o grado o año).<br>
+            Aproximádamente 6 líneas a elección.
+        </p>
+        <p>Hace click en agregr al carrito y consultá con nuestros vendedores por tu diseño.</p>
+        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible 
+            para utilizarla cuando quieras.
+            <b>Animate.!! estas a tiempo.</b>           
+        </p>`;
 
     let profesionalesCarrousel=`
         <div class="container">
@@ -164,12 +196,11 @@ let htmlSellosRopa=() =>{
 
     let ropaDescription=`
         <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos para ROPA:</h2>
-        <p>Ropa, sit amet consectetur adipisicing elit. Dolor at laboriosam
-            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-            sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-            sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
+        <p>Sellos automáticos para Ropa, resistente a varios lavados. Súper práctico para rotular 
+            la ropa del cole, las mudas, los barbijos, para el cole, para la colonia o para el club!<br>
+            Son de excelente calidad y mucha duración.<br>
+            Incluye: almohadilla entintada tinta negra.
+        </p>
             <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
                 al carrito y consultá con nuestros vendedores por tu diseño.</p>
             <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
@@ -222,16 +253,28 @@ let htmlSellosFechadores=() =>{
 let htmlSellosPocket=() =>{
     let pocketDescription=`
         <h2 style="font-family: Shantell Sans, serif;">Nuestros Sellos POCKET:</h2>
-        <p>POCKET, sit amet consectetur adipisicing elit. Dolor at laboriosam
-                            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-                            sequi voluptas nihil ad reprehenderit inventore, nam expedita!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor at laboriosam 
-                            tempore molestiae deleniti culpa iusto aut neque corporis libero placeat ea, 
-                            sequi voluptas nihil ad reprehenderit inventore, nam expedita!</p>
-                            <p>Hace click en el menu para ver nuestros productos, agregá el tipo de sello que te guste 
-                                al carrito y consultá con nuestros vendedores por tu diseño.</p>
-                            <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible para utilizarla cuando quieras.
-                                Animate.!! estas a tiempo.</p>`;
+        <p>Pocket Trodat, la combinación perfecta entre estilo y diseño. Es un sello funcional, 
+            fácil de transportar y siempre listo para usarse.<br>
+            Tanto por su tamaño compacto como por su variedad de colores, el sencillo 
+            mecanismo deslizante o el atractivo diseño, tiene todas las características 
+            que necesita para convertirse en la solución de marcaje portátil perfecta.</p>
+        <p><b>¡INCREÍBLEMENTE PEQUEÑO!</b><br>
+            Gracias a su perfecta combinación de tamaño y peso, el Pocket Printy es el 
+            sello ideal para llevar a todos lados.</p>
+        <p><b>¡DESLICE Y SELLE!</b><br>
+            Un mecanismo sencillo e intuitivo que permite\n usar el sello con una sola mano. 
+            Con los materiales mas duraderos y de más alta calidad del mercado.
+        </p>
+        <p><b>​UN DISEÑO QUE HABLA POR SI MISMO.</b><br>
+            El diseño moderno y lleno de estilo del Pocket Printy se ofrece en 8 diferentes 
+            colores para satisfacer todo tipo de gustos.<br> 
+            Tamaño placa de texto máximo.: 47 x 18 mm
+        </p>
+        <p>Hace click en agregr al carrito y consultá con nuestros vendedores por tu diseño.</p>
+        <p>Te vas a sorprender al ver tu idea materializada en un sello y disponible 
+            para utilizarla cuando quieras.
+            <b>Animate.!! estas a tiempo.</b>
+        </p>`;
 
     let pocketCarrousel=`
             <div class="container">
@@ -376,7 +419,7 @@ let drawViewSize =(sectionText,carrouselImg,buyButton)=>
             return `
             <table>
             <tr>
-                <td style="text-align: left; ">`+sectionText+`</td>
+                <td style="text-align: left; padding-right: 2%;">`+sectionText+`</td>
                 <td rowspan="2" style="text-align: center; opacity: 80%;">`+carrouselImg+`</td>
             </tr>
             <tr style="text-align: center; ">
@@ -389,7 +432,7 @@ let drawViewSize =(sectionText,carrouselImg,buyButton)=>
             return `
             <table>
             <tr>
-                <td style="text-align: left; ">`+sectionText+`</td>
+                <td style="text-align: left; padding-right: 2%;">`+sectionText+`</td>
                 <td rowspan="2" style="text-align: center; opacity: 80%;">`+carrouselImg+`</td>
             </tr>
             <tr style="text-align: center; ">
